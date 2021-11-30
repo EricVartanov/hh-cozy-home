@@ -1,0 +1,223 @@
+    @media (max-width: 1249.8px) {
+        section {
+            width: 100%;
+            max-width: none;
+            min-width: auto;
+            overflow-x: hidden;
+        }
+        .idc-container {
+            padding-left: 40px;
+            padding-right: 40px;
+        }
+        /* ********************head******************* */
+        .idc-head .idc-container {
+            padding-top: 180px;
+        }
+        .idc-logo {
+            margin-top: -105px;
+        }
+        .idc-company {
+            margin-top: -100px;
+        }
+        /* ********************about******************* */
+        .idc-about .idc-wrapper {
+            flex-direction: column;
+        }
+        .idc-about__text {
+            margin-left: 0;
+            margin-top: 50px;
+            max-width: 83vw;
+        }
+        /* *************pluses************ */
+        .idc-pluses__block {
+            margin-top: 20px;
+        }
+        .idc-pluses__item {
+            width: calc(50% - 40px);
+            margin-right: 20px;
+            margin-top: 20px;
+        }
+        .idc-pluses__item:nth-child(3) {
+            margin-right: 20px;
+        }
+        .idc-pluses__item:nth-child(2n) {
+            margin-right: 0;
+        }
+        /* ********************values******************* */
+        .idc-values .idc-wrapper {
+            flex-direction: column;
+        }
+        .idc-values__text {
+            margin-left: 0;
+            margin-top: 50px;
+            max-width: 86vw;
+        }
+        .idc-list {
+            padding-left: 22px;
+        }
+        .idc-list__item::before {
+            left: -22px;
+            top: 4px;
+            width: 10px;
+            height: 10px;
+        }
+        /* *************whyus************ */
+        .idc-whyus .idc-container {
+            padding-top: 150px;
+            padding-bottom: 80px;
+        }
+        .idc-whyus__items {
+            flex-direction: column;
+        }
+        .idc-items__block+.idc-items__block {
+            margin-left: 0;
+        }
+        /* *************shops************ */
+        .idc-map {
+            padding-top: 80px;
+        }
+    }
+    
+    @media (max-width: 767.8px) {
+        .idc-container {
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+        .idc-title {
+            font-size: 25px;
+        }
+        /* ********************head******************* */
+        .idc-head .idc-container {
+            padding-top: 120px;
+            padding-bottom: 50px;
+        }
+        .idc-logo {
+            margin-top: -85px;
+        }
+        .idc-company {
+            margin-top: -80px;
+        }
+        .idc-main-title__block .idc-title {
+            font-size: 35px;
+            max-width: 54vw;
+        }
+        .idc-swiper-buttons {
+            display: none;
+        }
+        .idc-swiper {
+            margin-top: 35px;
+            width: calc(100% + 30px);
+            margin-right: -30px;
+        }
+        /* ********************about******************* */
+        .idc-about .idc-container {
+            padding-top: 100px;
+            padding-bottom: 100px;
+        }
+        .idc-about__img {
+            width: 85.8vw;
+        }
+        /* *************numbers************ */
+        .idc-numbers .idc-container {
+            padding-top: 10px;
+            padding-bottom: 50px;
+        }
+        .idc-numbers__item {
+            margin-right: 45px;
+        }
+        /* *************pluses************ */
+        .idc-pluses .idc-container {
+            padding-top: 100px;
+            padding-bottom: 100px;
+        }
+        .idc-pluses__block {
+            margin-top: 15px;
+        }
+        .idc-pluses__item {
+            width: 100%;
+            margin-right: 0px;
+            margin-top: 25px;
+        }
+        .idc-pluses__item:nth-child(3) {
+            margin-right: 0px;
+        }
+        .idc-pluse {
+            line-height: 36px;
+            left: 30px;
+            bottom: 30px;
+        }
+        /* ********************values******************* */
+        .idc-values .idc-container {
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
+        .idc-values__img {
+            width: 85.8vw;
+        }
+        /* *************whyus************ */
+        .idc-whyus .idc-container {
+            padding-top: 100px;
+            padding-bottom: 40px;
+        }
+        .idc-whyus__item {
+            flex-wrap: nowrap;
+        }
+        .idc-item__text span {
+            display: inline;
+        }
+        /* *************shops************ */
+        .idc-shops .idc-container {
+            padding-bottom: 100px;
+        }
+        .idc-title__block {
+            position: relative;
+        }
+        .idc-map {
+            padding-top: 0px;
+            margin-top: 15px;
+        }
+        /* *************prefooter************ */
+        .idc-prefooter .idc-container {
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
+        .idc-prefooter .idc-bg-img {
+            width: 65vw;
+        }
+        .idc-prefooter__text {
+            max-width: 280px;
+            margin-top: 20px;
+            font-size: 16px;
+            line-height: 19px
+        }
+    }
+    
+    @media (max-width: 395px) {
+        .idc-container {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+        /* ********************head******************* */
+        .idc-main-title__block .idc-title {
+            font-size: 28px;
+        }
+        .idc-swiper {
+            margin-right: -20px;
+        }
+        /* *************pluses************ */
+        .idc-pluses__item {
+            width: 100%;
+            margin-right: 0px;
+            margin-top: 25px;
+        }
+        .idc-pluse {
+            left: 25px;
+            bottom: 35px;
+            font-size: 25px;
+            line-height: 130%;
+        }
+        /* *************shops************ */
+        .idc-map {
+            margin-top: 40px;
+        }
+    }
