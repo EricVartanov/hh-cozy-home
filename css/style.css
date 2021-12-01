@@ -85,6 +85,17 @@ body {
     /* font-family: 'Proxima Nova Condensed', sans-serif; */
     font-family: 'Verdana', Geneva, Tahoma, sans-serif;
     /* font-family: 'Roboto', sans-serif; */
+    -webkit-overflow-scrolling: touch;
+    user-select: none;
+    /* standerd */
+    -moz-user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    /* firefox specific */
+    -webkit-user-select: none;
+    /* Chrome, Opera and Safari*/
+    -ms-user-select: none;
+    /* IE, ms-edge */
+    overflow-x: hidden;
 }
 
 .idc-flex {
@@ -519,6 +530,16 @@ body {
     scrollbar-width: thin;
     scrollbar-color: #E0E2E7 transparent;
     z-index: 2;
+}
+
+.idc-burger__list::-webkit-scrollbar {
+    width: 5px;
+    border-radius: 12px;
+}
+
+.idc-burger__list::-webkit-scrollbar-thumb {
+    background-color: #E0E2E7;
+    border-radius: 10px;
 }
 
 .idc-burger__item {
