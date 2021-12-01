@@ -11,87 +11,65 @@ function banner_resize() {
 const list = document.querySelector('.idc-cities')
 const burger = document.querySelector('.idc-burger')
 
-function listOpen() {
-
-    list.addEventListener('click', function() {
-        burger.classList.toggle('open')
-    })
-
-    document.addEventListener('click', function(e) {
-        if (!list.contains(e.target)) {
-            burger.classList.remove('open')
-        }
-    })
-}
 
 const cityName = document.querySelectorAll('.idc-item-name')
 let allDots = document.querySelectorAll('.idc-dot')
+let titleCity = document.querySelector('.idc-cities').firstChild
 
-
-// функция, при наведении города сравнивает дата атр из списка и айди точки, при совпадении добавляет класс к тултипу точки 
-let tooltipOpen = function(names, dots) {
-    dots.forEach(function(dot) {
-        dot.addEventListener('mouseover', function() {
-            dot.classList.add('show')
-
-        })
-        dot.addEventListener('mouseout', function() {
-            if (!dot.getAttribute('data-clicked') == 1) {
+let EditTooltip = function(namecity, editItem) {
+    /* console.log(namecity.textContent, editItem) */
+    if (!editItem.getAttribute('data-clicked')) {
+        allDots.forEach(function(dot) {
+            if (dot.classList.contains('show')) {
                 dot.classList.remove('show')
+                dot.removeAttribute('data-clicked')
             }
         })
-        dot.addEventListener('click', function() {
-
-            var dotName = dot.querySelector('.idc-tooltip')
-            let titleCity = document.querySelector('.idc-cities').firstChild
-            if (!dot.getAttribute('data-clicked') == 1) {
-                dots.forEach(function(e) {
-                    e.classList.remove('show')
-                    e.removeAttribute('data-clicked')
-
-                })
-                titleCity.textContent = dotName.textContent
-                dot.classList.add('show')
-                dot.setAttribute('data-clicked', 1)
-
-            }
-        })
-    })
-    names.forEach(function(name) {
-        name.addEventListener('mouseover', function() {
-            var elem = document.querySelector('#' + name.getAttribute('data-id') + '')
-            elem.classList.add('show')
-
-        })
-        name.addEventListener('mouseout', function() {
-            var elem = document.querySelector('#' + name.getAttribute('data-id') + '')
-            if (!elem.getAttribute('data-clicked') == 1) {
-                elem.classList.remove('show')
-            }
-
-        })
-        name.addEventListener('click', function() {
-            var elem = document.querySelector('#' + name.getAttribute('data-id') + '')
-            let titleCity = document.querySelector('.idc-cities').firstChild
-            allDots.forEach(function(e) {
-                e.classList.remove('show')
-                e.removeAttribute('data-clicked')
-            })
-            titleCity.textContent = name.textContent
-            elem.classList.add('show')
-            elem.setAttribute('data-clicked', 1)
-        })
-    })
+        titleCity.textContent = namecity.textContent
+        editItem.classList.add('show')
+        editItem.setAttribute('data-clicked', 1)
+            /*  console.log('показали новый город') */
+    }
 }
+
 
 document.onreadystatechange = function() {
     if (document.readyState === 'complete') {
         // Ваш скрипт
-        tooltipOpen(cityName, allDots)
 
-        // открытие/закрытие списка городов
-        listOpen()
+        allDots.forEach(function(dot) {
+            dot.addEventListener('click', function() {
 
+                var dotName = dot.querySelector('.idc-tooltip')
+                EditTooltip(dotName, dot)
+            })
+        })
+        cityName.forEach(function(name) {
+            name.addEventListener('mouseover', function() {
+                var elem = document.querySelector('#' + name.getAttribute('data-id') + '')
+                elem.classList.add('show')
+
+            })
+            name.addEventListener('mouseout', function() {
+                var elem = document.querySelector('#' + name.getAttribute('data-id') + '')
+                if (!elem.getAttribute('data-clicked'))
+                    elem.classList.remove('show')
+            })
+            name.addEventListener('click', function() {
+                var elem = document.querySelector('#' + name.getAttribute('data-id') + '')
+                EditTooltip(name, elem)
+            })
+        })
+
+        list.addEventListener('click', function() {
+            burger.classList.toggle('open')
+        })
+
+        document.addEventListener('click', function(e) {
+            if (!list.contains(e.target)) {
+                burger.classList.remove('open')
+            }
+        })
         window.addEventListener('resize', function() {
             banner_resize();
         });

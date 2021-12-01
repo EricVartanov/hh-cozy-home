@@ -2,7 +2,7 @@ const headSwiper = new Swiper('.idc-swiper', {
     // Optional parameters
     direction: 'horizontal',
     loop: true,
-
+    grabCursor: true,
 
     // Default parameters
     slidesPerView: 1.5,

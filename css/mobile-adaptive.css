@@ -11,13 +11,10 @@
         }
         /* ********************head******************* */
         .idc-head .idc-container {
-            padding-top: 180px;
+            padding-top: 55px;
         }
-        .idc-logo {
-            margin-top: -105px;
-        }
-        .idc-company {
-            margin-top: -100px;
+        .idc-main-title__block {
+            margin-top: 80px;
         }
         /* ********************about******************* */
         .idc-about .idc-wrapper {
@@ -134,14 +131,19 @@
         }
         /* ********************head******************* */
         .idc-head .idc-container {
-            padding-top: 120px;
+            padding-top: 35px;
             padding-bottom: 50px;
         }
-        .idc-logo {
-            margin-top: -85px;
-        }
         .idc-company {
-            margin-top: -80px;
+            font-size: 14px;
+            line-height: 16px;
+        }
+        .idc-logo {
+            width: 124px;
+            height: 25px;
+        }
+        .idc-main-title__block {
+            margin-top: 50px;
         }
         .idc-main-title__block .idc-title {
             font-size: 35px;
