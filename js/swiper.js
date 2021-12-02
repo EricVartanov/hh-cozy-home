@@ -5,14 +5,14 @@ const headSwiper = new Swiper('.idc-swiper', {
     grabCursor: true,
 
     // Default parameters
-    slidesPerView: 1.5,
+    slidesPerView: 1.3,
     spaceBetween: 15,
 
 
     breakpoints: {
         // when window width is >= 320px
         320: {
-            slidesPerView: 1.4,
+            slidesPerView: 1.3,
             spaceBetween: 15
         },
         414: {
